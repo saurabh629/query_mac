@@ -2,7 +2,6 @@
 This program will take a valid Mac Address input from the user and provide the output
 about the Vendor. In case of Invalid Mac Address or Error appropriate message is returned
 '''
-#!/usr/bin/python
 
 import json
 import requests
@@ -40,14 +39,16 @@ def mac_query(api_key, mac_addr):
                     , result['vendorDetails']['companyAddress'])
         print('The MAC address does not belong to any registered block')
     else:
-        print('HTTP Error {}'.format(mac_search.status_code))
+        print('HTTP Error {} - Error in APIkey or url'.format(mac_search.status_code))
 if __name__ == '__main__':
-    MACADDR = input("Enter Mac Address:")
-    APIKEY = input("Enter API KEY:")
-    # query the mac address for Vendor details and output it
-    Result = mac_query(APIKEY, MACADDR)
-    if Result:
-        print('*'*10+'Output'+'*'*10)
-        print('Mac Address:\t'+Result[0], 'Vendor Name:\t'+ Result[1],\
-                                                 'Vendor Address:\t'+Result[2], sep='\n')
-
+    CONTINUE = ''
+    while CONTINUE != 'quit':
+        MACADDR = input('Enter Mac Address:')
+        APIKEY = input('Enter API KEY:')
+    	# query the mac address for Vendor details and output it
+        Result = mac_query(APIKEY, MACADDR)
+        if Result:
+            print('*'*10+'Output'+'*'*10)
+            print('Mac Address:\t'+Result[0], 'Vendor Name:\t'+ Result[1],\
+                                                  'Vendor Address:\t'+Result[2], sep='\n')
+        CONTINUE = input("\nEnter 'quit' to exit else press return to continue:")
