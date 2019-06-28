@@ -1,20 +1,10 @@
-This is simple Python app to query MAC address and find the vendor
-details. The App will take the input from the user for the MAC 
-Address. It will make REST API call to macaddress.io to find the
-Vendor details and output Vendor company, Vendor address.
+Note: This app is for Linux command line only.
 
-An APIkey is need to make a REST call. It is a pre-requisite to 
-register to macaddress.io to get a personalised APIkey. The app
-will query the MAC address if its valid and return the output.
-In case of invalid MAC address error message is return. In case
-of HTTP error during the get request occurs, HTTP error is returned. If MAC addres does not below to any vendor then, message
-return is MAC address doe not below to registered block. 
+This is simple python app to query MAC address and find the vendor details. The App will take the input from the user for the MAC Address. It will make REST API call to macaddress.io to find the vendor details and output vendor company, vendor address.
 
-The app contains single python file query_mac.py. It contains a
-requirement.txt file which includes all the dependencies of the 
-python app. It contains a Dockerfile to create a docker image to 
-run the app in a containerized fashion. Please follow the below 
-steps to build and run the app.
+An APIkey is need to make a REST call. It is a pre-requisite to register to macaddress.io to get a personalised APIkey. The app will query the MAC address if its valid and return the output. In case of invalid MAC address error message is return. In case of HTTP error during the get request occurs, HTTP error is returned. If MAC addres does not below to any vendor then, message return is MAC address doe not below to registered block. 
+
+The app contains single python file query_mac.py. It contains a requirement.txt file which includes all the dependencies of the python app. It contains a Dockerfile to create a docker image to run the app in a containerized fashion. Please follow the below steps to build and run the app.
 
 0. Register to macaddress.io to get a personalized key 
 
