@@ -1,4 +1,4 @@
-**Note: This app is for Linux command line only.
+**Note: This app is for Linux command line only**
 
 This is simple python app to query MAC address and find the vendor details. The App will take the input from the user for the MAC Address. It will make REST API call to macaddress.io to find the vendor details and output vendor company, vendor address.
 
