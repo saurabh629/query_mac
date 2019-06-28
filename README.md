@@ -10,21 +10,23 @@ The app contains single python file query_mac.py. It contains a requirement.txt 
 
 1. Clone the repository to local directory
    
-   git clone https://github.com/saurabh629/query_mac.git
+   *git clone https://github.com/saurabh629/query_mac.git*
 
 2. cd to query_mac
+   
+   *cd query_mac*
 
 3. Execute docker build command to create an image from the
    dockerfile
    
-   docker build --tag query_mac:version1 .
+   *docker build --tag query_mac:version1 .*
 
 4. Initiate the docker container
    
-   docker run -it --name query-mac-app query_mac
+   *docker run -it --name query-mac-app query_mac*
 
-5. Enter the MACaddress and APIKey input
+5. Enter MACaddress and APIKey input 
 
-6. Enter 'quit' to exit
+6. Validate the Vendor details in the ouput
 
-
+7. Enter 'quit' to exit
