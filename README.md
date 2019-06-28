@@ -7,8 +7,7 @@ An APIkey is need to make a REST call. It is a pre-requisite to
 register to macaddress.io to get a personalised APIkey. The app
 will query the MAC address if its valid and return the output.
 In case of invalid MAC address error message is return. In case
-of HTTP error during the get request occurs, HTTP error is ret-
-urned. If MAC addres does not below to any vendor then, message
+of HTTP error during the get request occurs, HTTP error is returned. If MAC addres does not below to any vendor then, message
 return is MAC address doe not below to registered block. 
 
 The app contains single python file query_mac.py. It contains a
